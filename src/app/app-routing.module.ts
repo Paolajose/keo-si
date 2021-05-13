@@ -4,8 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 // Modulos
 import { PagesRoutingModule } from './pages/pages.routing';
 import { AuthRoutingModule } from './auth/auth.routing';
-import { RegistroComponent} from './registro/registro.component'
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
+
+import { RegistroComponent} from './registro/registro.component'
 
 
 const routes: Routes = [
@@ -22,11 +23,14 @@ const routes: Routes = [
 
 
 @NgModule({
+  declarations:[
+    RegistroComponent,
+  ],
   imports: [
     RouterModule.forRoot( routes ),
     PagesRoutingModule,
     AuthRoutingModule,
-    RegistroComponent,
+    
 
   ],
   exports: [ RouterModule ]

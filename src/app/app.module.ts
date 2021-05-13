@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from'@angular/forms';
 import { FormsModule } from'@angular/forms';
 
 import { AngularFireModule } from '@angular/fire';
+
 import { environment } from 'src/environments/environment';
 import { NgxPaginationModule } from 'ngx-pagination';
 
@@ -32,7 +33,7 @@ import { RegistroComponent } from './registro/registro.component';
     NopagefoundComponent,
     NavbarComponent,
     RegistroComponent,
-    RegistroComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -42,10 +43,8 @@ import { RegistroComponent } from './registro/registro.component';
     NgbModule,
     ReactiveFormsModule,
     FormsModule,
-    AngularFireModule,
     NgxPaginationModule,
-   RegistroComponent
-    // .initializeApp(environment.firebase),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
 
   providers: [{ provide: LOCALE_ID, useValue: 'es-cl' }],
