@@ -4,6 +4,7 @@ import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FirebaseService} from '../firebase/firebase.service'
 
 
+
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
@@ -129,5 +130,7 @@ export class RegistroComponent implements OnInit {
       return `with: ${reason}`;
     }
   }
+
+
 
 }

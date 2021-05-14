@@ -16,10 +16,12 @@ import { AngularFireModule } from '@angular/fire';
 
 import { environment } from 'src/environments/environment';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RegistroComponent } from './registro/registro.component';
+
 
 
 
@@ -44,7 +46,8 @@ import { RegistroComponent } from './registro/registro.component';
     ReactiveFormsModule,
     FormsModule,
     NgxPaginationModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+    SweetAlert2Module,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
 
   providers: [{ provide: LOCALE_ID, useValue: 'es-cl' }],

@@ -4,15 +4,15 @@
 
 export const environment = {
   production: false,
-  firebaseConfig : {
-    apiKey: "AIzaSyCNuuBQzIoWq5gGEEHjt0Yc-QaJv8mShWA",
-    authDomain: "keo-firebase.firebaseapp.com",
-    databaseURL: "https://keo-firebase-default-rtdb.firebaseio.com",
-    projectId: "keo-firebase",
-    storageBucket: "keo-firebase.appspot.com",
-    messagingSenderId: "877535478930",
-    appId: "1:877535478930:web:0b52dceb4a56bc837b524b",
-    measurementId: "G-VRG8PFEWQX"
+  
+  firebase: {
+    apiKey: "AIzaSyA-15G8OAw9NJ4aDq6pLxuPaie9xz7nwnc",
+    authDomain: "tareas-angular.firebaseapp.com",
+    databaseURL: "https://tareas-angular.firebaseio.com",
+    projectId: "tareas-angular",
+    storageBucket: "tareas-angular.appspot.com",
+    messagingSenderId: "817524530311",
+    appId: "1:817524530311:web:1e1499ce6d5bd617832c22"
   }
 };
 

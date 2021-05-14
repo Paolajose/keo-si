@@ -23,9 +23,6 @@ const routes: Routes = [
 
 
 @NgModule({
-  declarations:[
-    RegistroComponent,
-  ],
   imports: [
     RouterModule.forRoot( routes ),
     PagesRoutingModule,
