@@ -23,6 +23,7 @@ import { SharedModule } from '../shared/shared.module';
     ProgressComponent,
     Grafica1Component,
     PagesComponent,
+    
   ],
   imports: [ 
     CommonModule,
@@ -30,4 +31,4 @@ import { SharedModule } from '../shared/shared.module';
     RouterModule
   ]
 })
-export class PagesModule { }
+export class PagesModule {}

@@ -6,7 +6,7 @@ import { PagesRoutingModule } from './pages/pages.routing';
 import { AuthRoutingModule } from './auth/auth.routing';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
-import { RegistroComponent} from './registro/registro.component'
+
 
 
 const routes: Routes = [
@@ -16,7 +16,7 @@ const routes: Routes = [
   // path: '/medicos' MedicosRouting
   // path: '/compras' ComprasRouting
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  {path: 'registro' , component:RegistroComponent},
+ 
   { path: '**', component: NopagefoundComponent },
 ];
 

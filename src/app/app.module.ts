@@ -4,6 +4,7 @@ import { LOCALE_ID,NgModule } from '@angular/core';
 // Modulos
 import { AppRoutingModule } from './app-routing.module';
 import { PagesModule } from './pages/pages.module';
+import { SharedModule} from './shared/shared.module'
 import { AuthModule } from './auth/auth.module';
 
 import { AppComponent } from './app.component';
@@ -19,8 +20,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NavbarComponent } from './navbar/navbar.component';
-import { RegistroComponent } from './registro/registro.component';
+
 
 
 
@@ -33,20 +33,20 @@ import { RegistroComponent } from './registro/registro.component';
   declarations: [
     AppComponent,
     NopagefoundComponent,
-    NavbarComponent,
-    RegistroComponent,
-
+   
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     PagesModule,
+    SharedModule,
     AuthModule,
     NgbModule,
     ReactiveFormsModule,
     FormsModule,
     NgxPaginationModule,
-    SweetAlert2Module,
+    SweetAlert2Module.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
   ],
 
