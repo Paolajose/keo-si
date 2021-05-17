@@ -14,7 +14,7 @@
           <th>Opciones</th>
         </tr>
       </thead>
-      <!-- <tbody>
+      <tbody>
         <tr *ngFor="let item of collection.data | paginate: config" [class]="item.tipo == 1 ? 'table-success' : 'table-danger'">
           <td>{{item.fecha.day}}/{{item.fecha.month}}/{{item.fecha.year}}</td> 
           <td>{{item.cantidad}}</td>
@@ -25,9 +25,9 @@
             <button type="button" class="btn btn-danger" (click)="eliminar(item)"  [swal]="['Exitoso!', 'Tu registro se ELIMINO satisfactoriamente', 'warning']">Eliminar</button>
           </td>
         </tr>
-      </tbody> -->
+      </tbody>
     </table>
-    <!-- <pagination-controls previousLabel="Anterior" nextLabel="Siguiente" responsive="true" (pageChange)="pageChanged($event)"></pagination-controls>
+    <pagination-controls previousLabel="Anterior" nextLabel="Siguiente" responsive="true" (pageChange)="pageChanged($event)"></pagination-controls>
     <ng-template #content let-modal>
       <div class="modal-header">
         <h4 class="modal-title" id="modal-basic-title">Crear o Editar Orden</h4>
@@ -79,7 +79,7 @@
         <button type="button" class="btn btn-outline-dark" [disabled]="estudianteForm.invalid" (click)="guardarEstudiante()" *ngIf="!actualizar" [swal]="['Listo!', 'Tu registro se GUARDO con exito', 'info']">Guardar</button>
         <button type="button" class="btn btn-outline-dark" (click)="actualizarEstudiante()" *ngIf="actualizar" [swal]="['Listo!', 'Tu registro se ACTUALIZO con exito', 'info']">Actualizar</button>
       </div>
-    </ng-template> -->
+    </ng-template>
   </div>
  
 

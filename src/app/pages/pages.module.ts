@@ -1,6 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { ReactiveFormsModule } from'@angular/forms';
+import { FormsModule } from'@angular/forms';
+import { environment } from 'src/environments/environment';
+import { AngularFireModule } from '@angular/fire';
+
+
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
@@ -28,6 +37,12 @@ import { SharedModule } from '../shared/shared.module';
   imports: [ 
     CommonModule,
     SharedModule,
+    NgbModule,
+    SweetAlert2Module.forRoot(),
+    NgxPaginationModule,
+    ReactiveFormsModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
     RouterModule
   ]
 })
