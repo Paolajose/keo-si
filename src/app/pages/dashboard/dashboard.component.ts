@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FirebaseService} from '../../firebase/firebase.service';
 import Swal from 'sweetalert2'
+import { TransitiveCompileNgModuleMetadata } from '@angular/compiler';
 
 @Component({
   selector: 'app-dashboard',
@@ -78,7 +79,43 @@ export class DashboardComponent implements OnInit {
   }
 
   eliminar(item: any): void {
-    this.firebaseService.deleteEstudiante(item.idFirebase);
+    
+    const swalWithBootstrapButtons = Swal.mixin({
+      customClass: {
+        confirmButton: 'btn btn-success m-3',
+        cancelButton: 'btn btn-danger m-3'
+      },
+      buttonsStyling: false
+    })
+    
+    swalWithBootstrapButtons.fire({
+      title: 'Esta seguro que desea eliminar este registro?',
+      text: "El registro se eliminara de manera permanente!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Si!',
+      cancelButtonText: 'No!',
+      reverseButtons: true
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.firebaseService.deleteEstudiante(item.idFirebase)
+   
+        swalWithBootstrapButtons.fire(
+          'Eliminado!',
+          'Su registro se ha eliminado con exito.',
+          'success'
+        )
+      } else if (
+        /* Read more about handling dismissals below */
+        result.dismiss === Swal.DismissReason.cancel
+      ) {
+        swalWithBootstrapButtons.fire(
+          '',
+          ' Su orden aun se encuentra en la lista de ordenes',
+          'info'
+        )
+      }
+    })
   }
 
   guardarEstudiante(): void {

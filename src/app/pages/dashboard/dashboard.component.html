@@ -23,7 +23,7 @@
           <td>{{item.tipo == 1 ? 'Compra' : 'Venta'}}</td>
           <td>
             <button type="button" class="btn btn-primary mr-2" (click)="openEditar(content,item)"  >Editar</button>
-            <button type="button" class="btn btn-danger" (click)="eliminar(item)"  [swal]="['Exitoso!', 'Tu registro se ELIMINO satisfactoriamente', 'warning']">Eliminar</button>
+            <button type="button" class="btn btn-danger" (click)="eliminar(item)">Eliminar</button>
           </td>
         </tr>
       </tbody>
