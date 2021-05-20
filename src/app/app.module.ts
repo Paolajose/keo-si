@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { LOCALE_ID,NgModule } from '@angular/core';
+import {NgModule } from '@angular/core';
 
 // Modulos
 import { AppRoutingModule } from './app-routing.module';
@@ -29,7 +29,7 @@ import { NopagefoundComponent } from './nopagefound/nopagefound.component';
   
   ],
 
-  providers: [{ provide: LOCALE_ID, useValue: 'es-cl' }],
+ 
   bootstrap: [AppComponent]
 })
 export class AppModule { }

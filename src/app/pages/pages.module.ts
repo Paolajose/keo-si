@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID,NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
@@ -44,6 +44,10 @@ import { SharedModule } from '../shared/shared.module';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     RouterModule
-  ]
+  ],
+
+  providers: [
+    // { provide: LOCALE_ID, useValue: 'es-cl' }
+  ],
 })
 export class PagesModule {}
