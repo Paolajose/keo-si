@@ -82,8 +82,8 @@ export class DashboardComponent implements OnInit {
     
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
-        confirmButton: 'btn btn-success m-3',
-        cancelButton: 'btn btn-danger m-3'
+        confirmButton: 'btn btn-success m-2',
+        cancelButton: 'btn btn-danger m-2'
       },
       buttonsStyling: false
     })
