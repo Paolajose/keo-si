@@ -1,19 +1,19 @@
-<div class="d-flex justify-content-end">
+<div>
   <div style="text-align: center;" class="container">
     <h2>Registro de Ordenes</h2>
     <div class="d-flex justify-content-end">
       <button type="button" class="btn btn-success y-5 m-3" (click)="open(content)">Agregar Orden</button>
       <button type= "button" class ="btn btn-success y-5 m-3" (click)="calcular()">Calcular</button>
     </div>
-    <div class="container">
-    <table class="table">
+    <div class="table table-responsive-lg"  >
+    <table class="table"> 
       <thead>
         <tr>
-          <th>Fecha</th>
-          <th>Cantidad</th>
-          <th>Precio</th>
-          <th>Tipo</th>
-          <th>Opciones</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Precio</th>
+          <th scope="col"> Tipo</th>
+          <th scope="col"> Opciones</th>
         </tr>
       </thead>
       <tbody>
@@ -27,9 +27,10 @@
             <button type="button" class="btn btn-danger" (click)="eliminar(item)">Eliminar</button>
           </td>
         </tr>
-      </tbody>
+      </tbody> 
     </table>
    </div>
+  
     <pagination-controls previousLabel="Anterior" nextLabel="Siguiente" responsive="true" (pageChange)="pageChanged($event)"></pagination-controls>
     <ng-template #content let-modal>
       <div class="modal-header">

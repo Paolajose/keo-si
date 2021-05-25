@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from'@angular/forms';
 import { FormsModule } from'@angular/forms';
 import { environment } from 'src/environments/environment';
 import { AngularFireModule } from '@angular/fire';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 
@@ -42,6 +43,7 @@ import { SharedModule } from '../shared/shared.module';
     NgxPaginationModule,
     ReactiveFormsModule,
     FormsModule,
+    FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
     RouterModule
   ],
